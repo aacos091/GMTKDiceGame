@@ -26,8 +26,8 @@ public class Drag : MonoBehaviour
             {
                 if (playerCar.currentGear == playerCar.maxGear)
                 {
-                    EndRace();
                     raceIsFinished = true;
+                    EndRace();
                 }
                 else
                 {
