@@ -123,6 +123,160 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &576030964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 576030966}
+  - component: {fileID: 576030965}
+  m_Layer: 0
+  m_Name: PlayerInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &576030965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576030964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abeffea97d340f24cb0b61724d857d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalRaces: 0
+  timesWon: 0
+  timesLost: 0
+  timesDraw: 0
+--- !u!4 &576030966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576030964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9125548, y: 0.6844139, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &742816816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742816818}
+  - component: {fileID: 742816817}
+  m_Layer: 0
+  m_Name: PlayerCarTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &742816817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742816816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f8664bddd5f0145aa6dd76f8103b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGear: 0
+  maxGear: 6
+  totalSpeed: 0
+  firstGearMultiplier: 10
+  secondGearMultiplier: 8
+  thirdGearMultiplier: 6
+  fourthGearMultiplier: 4
+  fifthGearMultiplier: 2
+  sixthGearMultiplier: 1
+--- !u!4 &742816818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742816816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9125548, y: 0.6844139, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &875553051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875553053}
+  - component: {fileID: 875553052}
+  m_Layer: 0
+  m_Name: OpponentCarTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &875553052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875553051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f8664bddd5f0145aa6dd76f8103b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGear: 0
+  maxGear: 6
+  totalSpeed: 0
+  firstGearMultiplier: 10
+  secondGearMultiplier: 8
+  thirdGearMultiplier: 6
+  fourthGearMultiplier: 4
+  fifthGearMultiplier: 2
+  sixthGearMultiplier: 1
+--- !u!4 &875553053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875553051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9125548, y: 0.6844139, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372053399
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1372053401}
   - component: {fileID: 1372053400}
-  - component: {fileID: 1372053402}
   m_Layer: 0
   m_Name: Drag
   m_TagString: Untagged
@@ -153,6 +306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b98db36bc15b2458ef128eaa0f7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCar: {fileID: 742816817}
+  opponentCar: {fileID: 875553052}
+  raceIsFinished: 0
 --- !u!4 &1372053401
 Transform:
   m_ObjectHideFlags: 0
@@ -168,27 +324,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1372053402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372053399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 175868be7bee9b546b711767a2fa806f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalSpeed: 0
-  firstGearSpeed: 0
-  secondGearSpeed: 0
-  thirdGearSpeed: 0
-  fourthGearSpeed: 0
-  fifthGearSpeed: 0
-  sixthGearSpeed: 0
-  currentGear: 0
-  i_currentGear: 1
 --- !u!1 &1550935706
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +359,7 @@ Camera:
   m_GameObject: {fileID: 1550935706}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
