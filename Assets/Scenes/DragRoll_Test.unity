@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372053401}
   - component: {fileID: 1372053400}
+  - component: {fileID: 1372053402}
   m_Layer: 0
   m_Name: Drag
   m_TagString: Untagged
@@ -152,14 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b98db36bc15b2458ef128eaa0f7079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSpeed: 0
-  firstGearSpeed: 0
-  secondGearSpeed: 0
-  thirdGearSpeed: 0
-  fourthGearSpeed: 0
-  fifthGearSpeed: 0
-  sixthGearSpeed: 0
-  currentGear: 0
 --- !u!4 &1372053401
 Transform:
   m_ObjectHideFlags: 0
@@ -175,6 +168,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1372053402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372053399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175868be7bee9b546b711767a2fa806f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalSpeed: 0
+  firstGearSpeed: 0
+  secondGearSpeed: 0
+  thirdGearSpeed: 0
+  fourthGearSpeed: 0
+  fifthGearSpeed: 0
+  sixthGearSpeed: 0
+  currentGear: 0
+  i_currentGear: 1
 --- !u!1 &1550935706
 GameObject:
   m_ObjectHideFlags: 0
