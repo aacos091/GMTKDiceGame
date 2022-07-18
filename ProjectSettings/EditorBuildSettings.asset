@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DragRoll_Test.unity
+    guid: 829a29e9a5a6c77458c75503334e0e2b
   m_configObjects: {}

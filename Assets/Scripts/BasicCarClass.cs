@@ -8,15 +8,17 @@ public class BasicCarClass : MonoBehaviour
     public int maxGear = 6;
     public int totalSpeed;
 
-    int firstGearSpeed = 0;
-    int secondGearSpeed = 0;
-    int thirdGearSpeed = 0;
-    int fourthGearSpeed = 0;
-    int fifthGearSpeed = 0;
-    int sixthGearSpeed = 0;
+    public int firstGearSpeed = 0;
+    public int secondGearSpeed = 0;
+    public int thirdGearSpeed = 0;
+    public int fourthGearSpeed = 0;
+    public int fifthGearSpeed = 0;
+    public int sixthGearSpeed = 0;
 
     [SerializeField]
-    int firstGearMultiplier, secondGearMultiplier, thirdGearMultiplier, fourthGearMultiplier, fifthGearMultiplier, sixthGearMultiplier;
+    public int firstGearMultiplier, secondGearMultiplier, thirdGearMultiplier, fourthGearMultiplier, fifthGearMultiplier, sixthGearMultiplier;
+
+    public int firstRoll, secondRoll, thirdRoll, fourthRoll, fifthRoll, sixthRoll;
 
     public void StartYourEngines() 
     {
@@ -39,27 +41,33 @@ public class BasicCarClass : MonoBehaviour
             switch (currentGear)
             {
                 case 0:
-                    firstGearSpeed = RollDice() * firstGearMultiplier;
+                    firstRoll = RollDice();
+                    firstGearSpeed = firstRoll * firstGearMultiplier;
                     totalSpeed += firstGearSpeed;
                     break;
                 case 1:
-                    secondGearSpeed = RollDice() * secondGearMultiplier;
+                    secondRoll = RollDice();
+                    secondGearSpeed = secondRoll * secondGearMultiplier;
                     totalSpeed += secondGearSpeed;
                     break;
                 case 2:
-                    thirdGearSpeed = RollDice() * thirdGearMultiplier;
+                    thirdRoll = RollDice();
+                    thirdGearSpeed = thirdRoll * thirdGearMultiplier;
                     totalSpeed += thirdGearSpeed;
                     break;
                 case 3:
-                    fourthGearSpeed = RollDice() * fourthGearMultiplier;
+                    fourthRoll = RollDice();
+                    fourthGearSpeed = fourthRoll * fourthGearMultiplier;
                     totalSpeed += fourthGearSpeed;
                     break;
                 case 4:
-                    fifthGearSpeed = RollDice() * fifthGearMultiplier;
+                    fifthRoll = RollDice();
+                    fifthGearSpeed = fifthRoll * fifthGearMultiplier;
                     totalSpeed += fifthGearSpeed;
                     break;
                 case 5:
-                    sixthGearSpeed = RollDice() * sixthGearMultiplier;
+                    sixthRoll = RollDice();
+                    sixthGearSpeed = sixthRoll * sixthGearMultiplier;
                     totalSpeed += sixthGearSpeed;
                     break;
                 default:

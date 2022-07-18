@@ -7,10 +7,21 @@ public class Drag : MonoBehaviour
     [SerializeField]
     BasicCarClass playerCar, opponentCar;
     [SerializeField]
-    bool raceIsFinished = false;
+    public bool raceIsFinished = false;
+
+    public GameObject playerCarSprite;
+    public GameObject opponentCarSprite;
+
+    float playerCarDistance;
+    float opponentCarDistance;
+
+    Vector3 playerCarPosition;
+    Vector3 opponentCarPosition;
 
     private void Start()
     {
+        backToStartingLine();
+
         playerCar.StartYourEngines();
         opponentCar.StartYourEngines();
 
@@ -35,11 +46,14 @@ public class Drag : MonoBehaviour
                     Debug.Log("You're going " + playerCar.totalSpeed + " mph!");
                     opponentCar.ShiftRoll();
                     Debug.Log("Your opponent is going " + opponentCar.totalSpeed + " mph!");
+                    checkPosition();
                 }
             }
             else if (raceIsFinished)
             {
                 raceIsFinished = false;
+
+                backToStartingLine();
 
                 playerCar.StartYourEngines();
                 opponentCar.StartYourEngines();
@@ -64,18 +78,58 @@ public class Drag : MonoBehaviour
         if (playerCar.totalSpeed > opponentCar.totalSpeed)
         {
             PlayerInfo.instance.timesWon++;
+            playerCarPosition = new Vector3(3.0f, 1.2f);
+            opponentCarPosition = new Vector3(-3.0f, -0.5f);
             Debug.Log("You won the race!");
         }
         else if (playerCar.totalSpeed < opponentCar.totalSpeed)
         {
             PlayerInfo.instance.timesLost++;
+            playerCarPosition = new Vector3(-3.0f, 1.2f);
+            opponentCarPosition = new Vector3(3.0f, -0.5f);
             Debug.Log("Your opponent won the race.");
         }
         else if (playerCar.totalSpeed == opponentCar.totalSpeed)
         {
             PlayerInfo.instance.timesDraw++;
+            playerCarPosition = new Vector3(0f, 1.2f);
+            opponentCarPosition = new Vector3(0f, -0.5f);
             Debug.Log("It's a draw.");
         }
         Debug.Log("Press Space to play again.");
+    }
+
+    void backToStartingLine() 
+    {
+        playerCarPosition = new Vector3(0f, 1.2f);
+        opponentCarPosition = new Vector3(0f, -0.5f);
+
+        playerCarDistance = 0f;
+        opponentCarDistance = 0f;
+
+        playerCarSprite.transform.position = playerCarPosition;
+        opponentCarSprite.transform.position = opponentCarPosition;
+    }
+
+    void checkPosition() 
+    {
+        if (playerCar.totalSpeed > opponentCar.totalSpeed)
+        {
+            playerCarDistance--;
+            opponentCarDistance++;
+            playerCarPosition = new Vector3(playerCarDistance, 1.2f);
+            opponentCarPosition = new Vector3(opponentCarDistance, -0.5f);
+            playerCarSprite.transform.position = playerCarPosition;
+            opponentCarSprite.transform.position = opponentCarPosition;
+        }
+        else if (playerCar.totalSpeed < opponentCar.totalSpeed)
+        {
+            playerCarDistance++;
+            opponentCarDistance--;
+            playerCarPosition = new Vector3(playerCarDistance, 1.2f);
+            opponentCarPosition = new Vector3(opponentCarDistance, -0.5f);
+            playerCarSprite.transform.position = playerCarPosition;
+            opponentCarSprite.transform.position = opponentCarPosition;
+        }
     }
 }
